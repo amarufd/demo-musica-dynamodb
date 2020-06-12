@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "3c4eea10-0e24-4d31-92d9-6332cea8ac42",
+		"name": "MusicaDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ConsultaCancion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artista\": \"los tetas\",\n    \"titulo\": \"corazon de sandia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rslx4zl1bh.execute-api.us-east-2.amazonaws.com/dev/cancion",
+					"protocol": "https",
+					"host": [
+						"rslx4zl1bh",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"cancion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaArtista",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artista\": \"los tetas\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rslx4zl1bh.execute-api.us-east-2.amazonaws.com/dev/artista",
+					"protocol": "https",
+					"host": [
+						"rslx4zl1bh",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"artista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BorraCancion",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artista\": \"los tetas\",\n    \"titulo\": \"corazon de sandia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rslx4zl1bh.execute-api.us-east-2.amazonaws.com/dev/borra-cancion",
+					"protocol": "https",
+					"host": [
+						"rslx4zl1bh",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"borra-cancion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarCancion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artista\": \"los tetas\",\n    \"titulo\": \"corazon de sandia\",\n    \"letra\": \"buenos dias ...\",\n    \"disco\": \"mama funck\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rslx4zl1bh.execute-api.us-east-2.amazonaws.com/dev/inserta-cancion",
+					"protocol": "https",
+					"host": [
+						"rslx4zl1bh",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"inserta-cancion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarCancion",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artista\": \"los tetas\",\n    \"titulo\": \"corazon de sandia\",\n    \"letra\": \"aaa buenos dias i wake up in the morning ...\",\n    \"disco\": \"mama funck\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rslx4zl1bh.execute-api.us-east-2.amazonaws.com/dev/actualiza-cancion",
+					"protocol": "https",
+					"host": [
+						"rslx4zl1bh",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"actualiza-cancion"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
