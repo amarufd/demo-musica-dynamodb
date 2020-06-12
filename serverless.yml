@@ -1,0 +1,63 @@
+service: lambda-music
+
+custom:
+  defaultProyecto: "Ejemplo desarrollo de crud lambda y DynamoDB"
+
+  Proyecto: MusicDynamoDBDemo
+  region: us-east-2
+  stage: dev
+  apiNamePrefix: dev
+
+  defaultStage: dev
+  currentStage: dev
+
+provider:
+  name: aws
+  runtime: python3.6
+  apiKeys:
+    - music-key
+  stackTags:
+    Proyecto: ${self:custom.Proyecto}
+  region: ${self:custom.region}
+
+functions:
+  cancion:
+    handler: handler.obtener_cancion
+    timeout: 30
+    events:
+      - http:
+          path: cancion
+          method: post
+          private: true
+  artista:
+    handler: handler.obtener_artista
+    timeout: 30
+    events:
+      - http:
+          path: artista
+          method: post
+          private: true
+  borra-cancion:
+    handler: handler.borra_cancion
+    timeout: 30
+    events:
+      - http:
+          path: borra-cancion
+          method: delete
+          private: true
+  inserta-cancion:
+    handler: handler.inserta_cancion
+    timeout: 30
+    events:
+      - http:
+          path: inserta-cancion
+          method: post
+          private: true
+  actualiza-cancion:
+    handler: handler.actualiza_cancion
+    timeout: 30
+    events:
+      - http:
+          path: actualiza-cancion
+          method: put
+          private: true
