@@ -219,3 +219,38 @@ def actualiza_cancion(event, context):
         }
     
     return response
+
+def obtener_todo(event, context):
+    try:
+        
+        response = obtenerTodo()
+
+        if 'Items' in response:
+            body = response['Items']
+        else:
+            body = {
+                "mensaje": "No existe"
+            }
+        
+        response = {
+            "statusCode": 200,
+            "body": json.dumps(body)
+        }
+
+        # return response
+    except Exception as e:
+        print("error no esperado")
+        print(traceback.format_exc())
+
+        print (e)
+        body = {
+            "mensaje": "Error al realizar la consulta",
+            "ex": str(e)
+        }
+
+        response = {
+            "statusCode": 500,
+            "body": json.dumps(body)
+        }
+    
+    return response

@@ -61,3 +61,11 @@ functions:
           path: actualiza-cancion
           method: put
           private: true
+  obtener-todo:
+    handler: handler.obtener_todo
+    timeout: 30
+    events:
+      - http:
+          path: obtener-todo
+          method: get
+          private: true

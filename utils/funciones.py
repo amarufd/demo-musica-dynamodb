@@ -181,3 +181,29 @@ def eliminandoCancion(jsonCancion):
         print(traceback.format_exc())
         print (e)
         return -1
+
+
+def obtenerTodo():
+    try:
+        dynamodb = boto3.resource('dynamodb')
+        table = dynamodb.Table('Musica')
+        
+        response = table.scan()
+
+        return response
+    
+    except ServicioError as e:
+        print("error de servicio")
+
+        return -1
+
+    except IsMutateError as e:
+        print("error de negocio")
+
+        return -1
+        
+    except Exception as e:
+        print("error no esperado")
+        print(traceback.format_exc())
+        print (e)
+        return -1

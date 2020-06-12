@@ -194,6 +194,35 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "todo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://rslx4zl1bh.execute-api.us-east-2.amazonaws.com/dev/obtener-todo",
+					"protocol": "https",
+					"host": [
+						"rslx4zl1bh",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"obtener-todo"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
